@@ -52,3 +52,9 @@ The application follows a Model-View-Controller (MVC) architecture, with separat
 - `Controller`: Handles user interactions and manages the application's memory allocation and deallocation logic.
 - `Main`: The entry point of the application, sets up the GUI and starts the program.
 
+# Screenshots
+
+![configuration screen](https://github.com/abdelrhmankadry/uranus-memory-allocator/blob/main/screenshots/configuration%20screen.png?raw=true)
+![simulation screen](https://github.com/abdelrhmankadry/uranus-memory-allocator/blob/main/screenshots/simulation%20screen.png?raw=true)
+![memory screen](https://github.com/abdelrhmankadry/uranus-memory-allocator/blob/main/screenshots/memory%20screen.png?raw=true)
+![segmentation table screen](https://github.com/abdelrhmankadry/uranus-memory-allocator/blob/main/screenshots/segmentation%20table%20screen.png?raw=true)
