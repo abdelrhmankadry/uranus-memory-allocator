@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <children>
+      <ToolBar layoutY="360.0" prefHeight="40.0" prefWidth="600.0" style="-fx-background-color: #3266dc;">
+        <items>
+          <Button mnemonicParsing="false" onAction="#onNewOperationClicked" style="-fx-background-color: #708aff;" text="NEW OPERATION" textFill="#e0dbff" />
+            <Button mnemonicParsing="false" onAction="#onShowProcessesClicked" style="-fx-background-color: #708aff;" text="SEGMENTATION TABLE" textFill="#e0dbff" />
+            <HBox prefHeight="30.0" prefWidth="250.0" />
+            <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@uranus.png" />
+               </image>
+            </ImageView>
+        </items>
+      </ToolBar>
+      <BorderPane layoutY="-6.0" prefHeight="375.0" prefWidth="600.0" AnchorPane.bottomAnchor="40.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <right>
+            <VBox prefHeight="360.0" prefWidth="165.0" style="-fx-background-color: ;" BorderPane.alignment="CENTER">
+               <children>
+                  <ScrollPane hbarPolicy="NEVER" prefHeight="360.0" prefWidth="200.0">
+                    <content>
+                      <AnchorPane fx:id="scrollPane" minHeight="0.0" minWidth="0.0" prefWidth="166.0" style="-fx-background-color: ;">
+                           <children>
+                              <HBox fx:id="memoryDiagram" />
+                           </children>
+                           <padding>
+                              <Insets bottom="10.0" top="10.0" />
+                           </padding></AnchorPane>
+                    </content>
+                     <VBox.margin>
+                        <Insets />
+                     </VBox.margin>
+                  </ScrollPane>
+               </children>
+            </VBox>
+         </right>
+         <center>
+            <TabPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: 3d6edd;" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+              <tabs>
+                <Tab style="-fx-background-color: 3d6edd;" text="Prepare">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <ChoiceBox fx:id="algorithmChoiseBox" layoutX="143.0" layoutY="14.0" prefWidth="150.0" style="-fx-background-color: #708aff;" />
+                              <Label layoutX="14.0" layoutY="18.0" text="Algorathim:" />
+                              <Label layoutX="14.0" layoutY="58.0" text="Memory total size:" />
+                              <TextField fx:id="MemorySizeTextEditor" layoutX="143.0" layoutY="54.0" />
+                              <Separator layoutX="12.0" layoutY="93.0" prefHeight="4.0" prefWidth="288.0" />
+                              <Label layoutX="17.0" layoutY="105.0" text="Holes">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="18.0" layoutY="138.0" text="Base Adress:" />
+                              <Label fx:id="limitSizeTextEditor" layoutX="201.0" layoutY="138.0" text="Limit Size:" />
+                              <TextField fx:id="HoleBaseAddressTextEditor" layoutX="18.0" layoutY="166.0" />
+                              <TextField fx:id="holeLimitSizeTextEditor" layoutX="201.0" layoutY="166.0" />
+                              <Button fx:id="addHoleButton" layoutX="18.0" layoutY="202.0" mnemonicParsing="false" onAction="#onAddHoleClicked" prefHeight="25.0" prefWidth="331.0" style="-fx-background-color: #708aff;" text="Add Hole" textFill="#e0dbff" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Simulation">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="14.0" text="Process ID:" />
+                              <TextField fx:id="processIdTextEditor" layoutX="89.0" layoutY="10.0" />
+                              <Separator layoutX="4.0" layoutY="49.0" prefHeight="2.0" prefWidth="274.0" />
+                              <Label layoutX="14.0" layoutY="52.0" text="Segments">
+                                 <font>
+                                    <Font name="System Bold" size="12.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="15.0" layoutY="82.0" text="Segment ID:" />
+                              <Label layoutX="17.0" layoutY="127.0" text="Limit Size:" />
+                              <TextField fx:id="segmentIdTextEditor" layoutX="89.0" layoutY="78.0" />
+                              <TextField fx:id="segmentLimitSizeTextEditor" layoutX="89.0" layoutY="123.0" />
+                              <Button fx:id="addSegmentButton" layoutX="14.0" layoutY="166.0" mnemonicParsing="false" onAction="#onAddSegmentClicked" prefHeight="25.0" prefWidth="222.0" style="-fx-background-color: #708aff;" text="Add Segment" textFill="#e0dbff" />
+                              <Button layoutX="316.0" layoutY="282.0" mnemonicParsing="false" onAction="#onShowMemoryClicked" style="-fx-background-color: #708aff;" text="SHOW MEMORY" textFill="#e0dbff" />
+                              <Label fx:id="erroText" layoutX="34.0" layoutY="253.0" textFill="RED" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
