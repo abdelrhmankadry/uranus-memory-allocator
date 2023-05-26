@@ -17,7 +17,7 @@ The application is built using the following technologies:
 - JavaFX for the graphical user interface (GUI)
 - FXML for defining the GUI layout
 - CSS for styling the GUI
-- Gradle for dependency management
+
 
 ## Getting Started
 
