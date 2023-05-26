@@ -24,7 +24,7 @@ The application is built using the following technologies:
 To run the Uranus Memory Allocator application locally, follow these steps:
 
 1. Ensure you have Java Development Kit (JDK) installed on your machine.
-2. Clone this repository to your local machine using `git clone https://github.com/your-username/uranus-memory-allocator.git`
+2. Clone this repository to your local machine using `git clone https://github.com/abdelrhmankadry/uranus-memory-allocator.git`
 3. Open the project in your preferred Java IDE.
 4. Build the project using Gradle or your IDE's build system.
 5. Run the `Main` class to start the application.
